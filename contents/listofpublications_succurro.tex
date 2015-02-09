@@ -1,0 +1,92 @@
+%% start of file `jdoe_classic.tex'.
+%% Copyright 2006 Xavier Danaux.
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt]{moderncv}
+
+% moderncv styles
+\moderncvstyle{casual}       % optional argument are 'nocolor' (black & white cv) and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvstyle{classic}       % idem
+%\moderncvtheme[red]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+
+% character encoding
+\usepackage[utf8]{inputenc}   % replace by the encoding you are using
+%\usepackage[T1]{fontenc}
+\usepackage[scale=0.84]{geometry}
+\recomputelengths                             % required when changes are made to page layout lengths
+
+%\renewcommand{\listsymbol}{{\fontencoding{U}\fontfamily{ding}\selectfont\tiny\symbol{'102}}} % define another symbol to be used in front of the list items
+
+% the ConTeXt symbol
+\def\ConTeXt{%
+  C%
+  \kern-.0333emo%
+  \kern-.0333emn%
+  \kern-.0667em\TeX%
+  \kern-.0333emt}
+
+% slanted small caps (only with roman family; the sans serif font doesn't exists :-()
+%\usepackage{slantsc}
+%\DeclareFontFamily{T1}{myfont}{}
+%\DeclareFontShape{T1}{myfont}{m}{scsl}{ <-> cork-lmssqbo8}{}
+%\usefont{T1}{myfont}{m}{scsl}Testing the font
+
+% command and color used in this document, independently from moderncv 
+\definecolor{see}{rgb}{0.5,0.5,0.5}% for web links
+\newcommand{\up}[1]{\ensuremath{^\textrm{\scriptsize#1}}}% for text subscripts
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\usepackage{hyperref}
+%\hypersetup{urlcolor=roottitletitlecolor,colorlinks=true}
+\hypersetup{urlcolor=see,colorlinks=true}
+
+
+\newif\ifIsAcademic
+%\IsAcademicfalse
+\IsAcademictrue
+
+
+
+% personal data (the given example is exhaustive; just give what you want)
+\firstname{Antonella} %\Huge rimpicciolisce un po' rispetto allo standard del nome!!!!
+\familyname{Succurro}
+\title{List of significant publications}               % optional, remove the line if not wanted
+
+
+\ifIsAcademic
+\address{32/S-A18 mailbox J28400 c/o CERN CH-1211 Geneva 23, Switzerland}{IFAE ATLAS c/o Edifici Cn, Universitat Autònoma de Barcelona, E-08193 Bellaterra (Barcelona),
+Spain}    % optional, remove the line if not wanted
+\mobile{+34 620 980340}                    % optional, remove the line if not wanted
+\phone{+34 93 581 2837}                      % optional, remove the line if not wanted
+\email{antonella.succurro [AT] cern.ch}                      % optional, remove the line if not wanted
+\else
+\address{via delle Azalee 4}{27010 S.Genesio (PV), Italy}    % optional, remove the line if not wanted
+\mobile{+39 380 47 24 599}                    % optional, remove the line if not wanted
+\phone{+39 0382 580174}                      % optional, remove the line if not wanted
+\email{a.succurro [AT] gmail.com}                      % optional, remove the line if not wanted
+\fi
+%\extrainfo{additional information (optional)} % optional, remove the line if not wanted
+%\photo[64pt]{my_photo_smaller}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Last Modified: September 23, 2009}                 % optional, remove the line if not wanted
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+\begin{document}
+
+
+\maketitle
+%\makequote
+
+\input{publications.tex}
+
+\roottitle{\textsc{Updated}}
+%\headedsection{}{\date}
+\headedsection{}{December 9th, 2013}
+
+\end{document}
